@@ -1,0 +1,38 @@
+/* Listing 12-5. Custom navigation effect with a background image */
+li {
+	background: url('images/navbg.png') 5px no-repeat;
+	padding-left: 16px;
+}
+
+#navtabs li {
+  display: inline;	/* Listing 12-3 */
+  padding: 10px;
+}
+
+#navtabs li a {
+	text-decoration: none;
+}
+		
+/* Listing 12-4. Bottom border for menu hyperlinks */
+#navtabs li a:hover {
+  color: #949295;
+  border-bottom: 1px solid #949295;
+}
+
+/* Listing 12-9 */
+#navtabs li.first {
+	background: none;
+	padding-left: 0;
+}
+
+/* Listing 12-11. CSS rules for access keys */
+span.ak {
+	color: red;
+	background-color: #ffb;
+	border-bottom: solid navy 1px;
+}
+
+/* Listing 12-12. Bullet image */
+ul.tick { 
+	list-style-image: url('../images/tick.png')
+}

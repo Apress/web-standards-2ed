@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Listing 10-3</title>
+		<meta charset="UTF-8" />
+		<script type="text/javascript">
+		  function inclineh() {
+			document.getElementById('main').style.lineHeight="200%";
+		  }
+
+		  function incpars() {
+			var get_ps = document.getElementsByTagName("p");
+			for (var i = 0; i < get_ps.length; i++) {
+			  get_ps[i].style.marginBottom="3em";
+			}
+		  }
+		</script>	
+	</head>	
+	<body>
+		<div>
+		  <a href="javascript:inclineh();"><img src="images/lineh.png" alt="Line height" title="Increase line height" /></a>
+		  <a href="javascript:incpars();"><img src="images/pspacing.png" alt="Paragraph spacing" title="Increase paragraph spacing" /></a>
+		</div>
+		<div id="main">
+			<p>
+			This is the first paragraph of the main content.
+			</p>
+			<p>
+			This is the second paragraph of the main content.
+			</p>
+			<p>
+			This is a sample code from the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>		  
+		</div>
+	</body>
+</html>

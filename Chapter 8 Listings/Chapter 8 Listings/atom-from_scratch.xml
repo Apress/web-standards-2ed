@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>An Atom news feed example</title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/" />
+    <link rel="self" type="application/atom+xml" href="http://www.example.com/News/atom.xml" />
+    <id>tag:www.example.com,2008-09-29://4</id>
+    <updated>2011-08-08T08:03:00Z</updated>	<!-- This element content should always be updated along with the publication date of the latest news entry -->
+	
+	<!-- A new entry can be added to the feed by simply copy-pasting the latest news entry below -->	
+	<entry>
+		<title>News item 2</title>
+		<link rel="alternate" type="text/html" href="http://www.example.com/News/2011.html#entry-9167" />
+		<id>tag:www.example.com,2011://4.9167</id>
+		<published>2011-08-08T08:03:00Z</published>
+		<updated>2011-08-08T08:03:00Z</updated>
+		<summary>Summary of news entry 2</summary>
+		<author>
+			<name>Dr. Leslie Sikos</name>
+		</author>
+		<category term="Home Page Stories" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="en" xml:base="http://www.example.com/">
+		<![CDATA[ The full content of News #2. Markup code can also be included. ]]>
+		</content>
+	</entry>
+	<!-- End of latest news entry -->	
+	
+	<entry>
+    <title>News item 1</title>
+    <link rel="alternate" type="text/html" href="http://www.example.com/News/2011.html#entry-9165" />
+    <id>tag:www.example.com,2011://4.9165</id>
+    <published>2011-08-07T08:48:00Z</published>
+    <updated>2011-08-07T08:48:00Z</updated>
+    <summary>Summary of news entry 1</summary>
+    <author>
+        <name>Dr. Leslie Sikos</name>
+    </author>
+    <category term="Publication" />
+    <content type="html" xml:lang="en" xml:base="http://www.example.com/">
+	<![CDATA[ The full content of News #1. <a href="http://lesliesikos.com/tutorials/">Markup code</a> can also be included. ]]>
+    </content>
+</entry>
+</feed>

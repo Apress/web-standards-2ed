@@ -1,0 +1,27 @@
+body {
+  background: url('../images/bg.jpg') no-repeat 100% 0% fixed;  
+  background-color:#004c25;
+  color: #fff;
+  font-family: "Garamond", serif;
+}
+
+#wrapper {
+	width: 800px;
+	margin: auto;
+}
+
+#wrapper a:link {
+	color: #ff0;
+}
+
+#wrapper a:hover {
+		color: #f0f;
+}
+
+#wrapper a:visited {
+	color: #fff;
+}
+
+#colorswitch a:link {
+	padding: 10px;
+}

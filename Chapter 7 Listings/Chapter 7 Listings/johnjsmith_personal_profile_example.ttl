@@ -1,0 +1,45 @@
+@prefix airport: <http://www.daml.org/2001/10/html/airport-ont#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
+<http://www.bestsites.com/john/sites/> a foaf:project;
+	foaf:homepage <http://www.mylatestwebsite.com>;
+	foaf:name "XY Portfolio".
+<http://www.example.com/about/> dc:description "John Smith is a Web developer specializing in HTML5 applications, microdata, and accessibility.";
+	a foaf:Person;
+	contact:nearestairport _:bnode923965952;
+	= <http://inspector.sindice.com/inspect?url=http://www.example.com/metadata/johnjsmith.rdf>;
+	foaf:based_near _:bnode1816199296;
+	foaf:currentproject <http://www.bestsites.com/john/sites/>;
+	foaf:depiction <http://www.example.com/images/js_highresolution.jpg>;
+	foaf:firstname "John";
+	foaf:homepage <http://www.example.com>;
+	foaf:mbox_sha1sum "2c2e62e9c877144e54634b9a61538d06f62be7f2";
+	foaf:name "John Smith";
+	foaf:publications <http://www.example.com/publist>;
+	foaf:surname "Smith";
+	foaf:thumbnail <http://www.example.com/images/js.jpg>;
+	foaf:topic_interest "Web Services";
+	foaf:workinfoHomepage <http://www.example.com/services/>;
+	foaf:workplaceHomepage <http://www.example.com>.
+<http://www.example.com/metadata/sikos.rdf> dc:creator <http://www.example.com/about/>;
+	dc:description "RDF description of John Smith – machine-readable RDF/XML";
+	dc:title "RDF Description of John J. Smith";
+	a foaf:PersonalProfileDocument;
+	rdfs:label "RDF Description of John J. Smith";
+	foaf:maker <http://www.example.com/about/>;
+	foaf:primaryTopic <http://www.example.com/about/>.
+_:bnode1816199296 a geo:point;
+	geo:lat "52.024868";
+	geo:long "-0.707143".
+_:bnode923965952 airport:iatacode "ADL";
+	airport:location "Adelaide, Australia";
+	airport:name "Adelaide Airport";
+	a airport:airport;
+	rdfs:seealso <http://www.adelaideairport.com.au/>;
+	geo:lat "-34.945";
+	geo:long "138.530556".

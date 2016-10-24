@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Calluna";
+  src: url('fonts/Calluna-Regular.otf');
+}
+
+@font-face {
+  font-family: "Callunab";
+  src: url('fonts/Calluna-Bold.otf');
+}
+
+@font-face {
+  font-family: "Callunai";
+  src: url('fonts/Calluna-It.otf');
+} 
+
+body {
+	font-family: "Calluna", "Garamond", sans-serif;
+	font-size: 1.2em;
+}
+
+em {
+	font-family: "Callunai";
+}
+
+h1, strong {
+	font-family: "Callunab";
+}

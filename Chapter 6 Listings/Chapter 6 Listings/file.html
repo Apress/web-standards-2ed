@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>HTML5 File API example</title>
+		<meta charset="UTF-8" />
+		<style>
+			#drop {
+				border: 2px dashed #f00;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>
+			<h2>Choose file(s)</h2>
+			<p>
+				<input id="upload" type="file" multiple="multiple">
+			</p>
+			<div id="drop">
+				  You can also drag and drop your files here
+			</div>			
+			<h2>Retrieved file information</h2>
+			<ul id="fileList">
+				<li class="no-items">&lt;no files uploaded yet&gt;</li>
+			</ul>
+			<script>
+				(function () {
+					var filesUpload = document.getElementById("upload"),
+						dropArea = document.getElementById("drop"),
+						fileList = document.getElementById("fileList");
+					
+					function fileTransfer (files) {
+						var li,
+							file,
+							fileInfo;
+						fileList.innerHTML = "";
+							
+						for (var i = 0, fl = files.length; i < fl; i++) {
+							li = document.createElement("li");
+							file = files[i];
+							fileInfo = file.name; // Name
+							fileInfo += " (" + file.type + "), "; // Type
+							fileInfo += file.size + " bytes"; // Size
+							li.innerHTML = fileInfo;
+							fileList.appendChild(li);
+						};
+					};
+					
+					filesUpload.onchange = function () {
+						fileTransfer(this.files);
+					};
+					
+					dropArea.ondragenter = function () {
+						return false;
+					};
+					
+					dropArea.ondragover = function () {
+						return false;
+					};
+					
+					dropArea.ondrop = function (evt) {
+						fileTransfer(evt.dataTransfer.files);
+						return false;
+					};
+					
+				})();
+			</script>
+		</section>
+	</body>
+</html>

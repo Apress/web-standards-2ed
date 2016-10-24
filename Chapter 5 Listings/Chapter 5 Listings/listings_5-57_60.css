@@ -1,0 +1,19 @@
+/* Listing 5-57. Rule for elements to be displayed as block */
+a {
+	display: block;
+}
+
+/* Listing 5-58. Rule for elements to be displayed inline */
+li {
+	display: inline;	/* Overrides default display of unordered list items */
+}
+/* Listing 5-59. Rule for elements to hide without spaceholder */
+
+#none {
+	display: none;
+}
+
+/* Listing 5-60. Rule for elements to hide with spaceholder */
+#hidden {
+	visibility: hidden;
+}

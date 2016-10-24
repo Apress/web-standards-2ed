@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Creating an accessible form</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<h1>An accessible form – sample code</h1>
+		<form method="post" action="register.php">
+		  <fieldset>
+			<legend>Personal data</legend>
+			<label for="firstname">First name</label><br />
+			<input type="text" name="firstname" id="firstname" size="15" maxlength="30" tabindex="12" /><br />
+			<label for="lastname">Last name</label><br />
+			<input type="text" name="lastname" id="lastname" size="20" maxlength="50" tabindex="13" />
+		  </fieldset>
+		  <fieldset>
+			<legend>Main interests</legend>
+			<input name="interests" type="checkbox" value="1" id="photo" tabindex="14" />
+			<label for="photo">Photography</label><br />
+			<input name="interests" type="checkbox" value="2" id="video" tabindex="15" />
+			<label for="video">Videography</label><br />
+			<input name="interests" type="checkbox" value="3" id="web" tabindex="16" />
+			<label for="web">Web</label>
+		  </fieldset>
+		</form>
+	</body> 
+</html>

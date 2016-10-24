@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title>Common errors</title>
+	<meta charset="UTF-8" />
+	<link  rel="stylesheet" type="text/css" href="common.css" />
+  </head> 
+  <body>
+	<div id="wrapper">	<!-- Listing 15-8 -->
+		<header>
+		  <h1>Document sample</h1>
+		</header>
+		<section>
+		  <article>
+			<h2>Incorrectly used elements</h2>
+			<!-- Listing 15-1. A practice that should never be used
+			<p>This is a very bad practice
+			<p>dating back to the early days
+			<p>of the Web
+			<p>unfortunately it is still in use
+			<p>even if it has many drawbacks, e.g.,
+			<p>illogical
+			<p>hard to identify related content
+			-->
+			<h3>Listing 15-2. The correct markup for Listing 15-1</h3>
+			<p>This is a very bad practice dating back to the early days of the Web. Unfortunately it is still in use even if it has many drawbacks, e.g.,</p>
+			<ul>
+			  <li>Illogical</li>
+			  <li>Hard to identify related content</li>
+			</ul>
+			<h3>Listing 15-3. A more advanced solution</h3>
+			<div id="thinbox">
+			  <p>This is a very bad practice dating back to the early days of the Web. Unfortunately it is still in use even if it has many drawbacks, e.g.,</p>
+			  <ul>
+				<li>Illogical</li>
+				<li>Hard to identify related content</li>
+			  </ul>
+			</div>
+			<h2>Incorrect structure</h2>
+			<!-- Listing 15-5. List items without structure or semantic meaning (incorrect)
+			- first item <br />
+			- second item <br />
+			- third item <br />
+			-->
+			<h3>Listing 15-6. The correct markup for Listing 15-5</h3>
+			<ul>
+			  <li>first item</li>
+			  <li>second item</li>
+			  <li>third item</li>
+			</ul>
+			<h2>Misused tables</h2>
+			<!-- 
+			Listing 15-11. Fragment of a misused table
+			<table border="1" bgcolor="#898989" width="400">
+			<td align="center" valign="top" spanning="2"> &nbsp; 
+			<td>
+			-->
+			<h3>Listing 15-12. Correct structure of tabular data in the markup</h3>
+			<table>
+			  <tr>
+				<td>Meaningful content in data cell</td>
+				<td>Content of other data cell</td>
+			  </tr>
+			</table>
+			<h2>Non-optimal code length</h2>
+			<!-- Listing 15-13. A divitis
+			<div class="maincontainer"><div class="nounderlineleftmargin"><div class="container"><div class="topheadlinesleftalign">The Latest News</div><div class="maintextthickborder"></div></div></div>
+			</div>
+			Listing 15-19. Standard-compliant but non-optimal markup (classitis)
+			<div id="main">
+			  <p class="maintext">The is the main content of the site.</p>
+			  <p class="maintext">The second paragraph should look like the first one.</p>
+			  <p class="maintext">In fact, all paragraphs of the document have the same styles.</p>
+			</div>
+			-->
+			<h3>Listing 15-21. The correct markup for Listing 15-19</h3>
+			<div id="main">
+			  <p>The is the main content of the site.</p>
+			  <p>The second paragraph should look like the first one.</p>
+			  <p>In fact, all paragraphs of the document have the same styles.</p>
+			</div>
+		  </article>
+		</section>
+		<footer>
+			<p>
+			These codes are the listings from chapter 15 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>	
+		</footer>
+	</div>
+  </body> 
+</html>

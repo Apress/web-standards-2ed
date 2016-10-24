@@ -1,0 +1,95 @@
+/* Listing 15-4. CSS ruleset for Listing 15-3 */
+.thinbox {
+  width: 400px;
+  height: 600px;
+  font-size: 14px;
+}
+
+/* Ignored inheritance */
+
+/* Listing 15-11. Redundant rulesets (should be optimized) */
+
+/*
+body {
+  font-family: Verdana, Arial;
+  font-size: 1.2em;
+  color: #351801;
+}
+
+p {
+  font-family: Verdana, Arial;
+  font-size: 1.2em;
+  color: #351801;
+}
+
+div {
+  font-family: Verdana, Arial;
+  font-size: 1.2em;
+  color: #351801;
+}
+*/
+
+/* Listing 15-12. A better yet still redundant solution */
+
+/* body, p, div {
+  font-family: Verdana, Arial;
+  font-size: 1.2em;
+  color: #351801;
+}
+*/
+
+/* Listing 15-13. The correct solution */
+
+body {
+  font-family: Verdana, Arial;
+  font-size: 1.2em;
+  color: #351801;
+}
+
+/* Listing 15-15. Standard-compliant but non-optimal styling rules */
+
+/*
+.maintext {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #1d4c90;
+}
+*/
+
+/* Listing 15-17. The optimal CSS rules */
+
+#main p {
+  margin: 10px 15px 5px;
+  font-size: 14px;
+  color: #1d4c90;
+}
+
+/* Listing 15-18. A typical but non-standard, browser-dependent ruleset for transparency */
+
+/*
+#transdiv {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+}
+*/
+
+/* Valid but browser-dependet CSS3 rule */
+
+#transdiv {
+  opacity: 0.7;
+}
+
+
+/* Listing 15-19. A transparent PNG background file is a robust solution */
+
+/*
+#transdiv {
+  background-image: url('images/transpbg.png');
+  background-repeat: repeat;
+}
+*/

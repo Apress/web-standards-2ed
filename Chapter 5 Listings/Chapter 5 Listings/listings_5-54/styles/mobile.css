@@ -1,0 +1,16 @@
+@import ("main.css");
+
+body {
+  background-image: none;	/* overrides the background-image */
+  max-width: 640px;
+}
+
+/* Adds new rules to the rulesets declared in main.css */
+
+#colorswitch a:link {
+  display: block;
+}
+
+#wrapper a:hover {
+  color: #f60;
+}

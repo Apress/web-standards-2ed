@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>WebSocket example</title>
+		<meta charset="UTF-8" />	
+		<script type="text/javascript">
+			function myWS() {
+			  if ("WebSocket" in window) {
+				 alert("WebSocket is supported by your Browser!");
+				 // Let us open a web socket
+				 var ws = new WebSocket("ws://localhost:9998/echo");
+				 ws.onopen = function() {
+					// Web Socket is connected, send data using send()
+					ws.send("Message to send");
+					alert("Message sent…");
+				 };
+				 ws.onmessage = function (evt) { 
+					var received_msg = evt.data;
+					alert("Message received…");
+				 };
+				 ws.onclose = function() { 
+					// websocket is closed.
+					alert("Connection closed…"); 
+				 };
+			  }
+			  else {
+				 // WebSocket is not supported by your browser
+				 alert("WebSocket is not supported by your browser!");
+			  }
+			}
+		</script>
+	</head>
+	<body>
+		<p>
+			<a href="javascript:myWS()">Start WebSocket</a>
+		</p>
+	</body>
+</html>

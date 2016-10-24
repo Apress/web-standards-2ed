@@ -1,0 +1,11 @@
+#content {
+	width: 720px;
+	margin: 0px auto;
+}
+
+#main {
+	position: absolute;
+	width: 780px;
+	left: 50%;
+	margin-left: -390px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>HTML5 DnD API example</title>
+		<meta charset="UTF-8">
+		<style>
+			body { 
+			width: 800px; 
+			margin: 100px auto; 
+			}
+			menu { 
+			background-color:#ddd; 
+			}
+			#leftDiv, #rightDiv { 
+				float: left;
+				width: 200px; 
+				height: 100px; 
+				margin: 50px;
+				background-color: #bbdeee;
+				border: 1px solid #000;
+			}
+			.dragbox {
+				width: 60px; 
+				height: 20px; 
+				
+				margin: 5px; 
+				text-align: center; 
+				font-weight: bold;
+				background-color: #ff6;
+				display: inline-block;
+
+				cursor: move;
+			}
+		</style>
+		<script>
+			// dragDefine - called when an item starts to be dragged
+			function dragDefine(ev) {
+				ev.dataTransfer.effectAllowed = 'move';
+				ev.dataTransfer.setData("text/plain", ev.target.getAttribute('id'));
+				ev.dataTransfer.setDragImage(ev.target, 0, 0);
+				return true;
+			}
+					
+			// dragOver - called when the item being dragged is over another item
+			function dragOver(ev) {
+				// Get the id of the item being dragged
+				//var idDrag = ev.dataTransfer.getData("Text");
+				// Get the id of the item the dragged object is currently over
+				//var idBox = ev.target.getAttribute('id');	
+				// You may want to perform some checks here, e.g. is the dragged item allowed to be dropped here for example
+				
+				// Turn off the default behaviour i.e. allow the drop
+				ev.preventDefault();
+			}
+			
+			// dragEnd - called when the drag is complete
+			function dragEnd(ev) {
+				return true;
+			}
+			
+			// dragDrop - called when the item being dragged is dropped
+			function dragDrop(ev) {
+				// Get the id of the item being dragged
+				var idDrag = ev.dataTransfer.getData("Text");
+				// Append the dragged item to the item it is currently over
+				ev.target.appendChild(document.getElementById(idDrag));
+				// Turn off the default behaviour
+				ev.preventDefault();
+			}		
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>
+			<header>
+				<h3>Drag the word “DnD” to the other box and back</h3>
+			</header>
+<div id="leftDiv" ondragover="dragOver(event)" ondrop="dragDrop(event)">
+   <div id="word1" class="dragbox" draggable="true" ondragstart="return dragDefine(event)" ondragend="dragEnd(event)">My</div>
+   <div id="word2" class="dragbox" draggable="true" ondragstart="return dragDefine(event)" ondragend="dragEnd(event)">dog</div>
+   <div id="word3" class="dragbox" draggable="true" ondragstart="return dragDefine(event)" ondragend="dragEnd(event)">is</div>
+   <div id="word4" class="dragbox" draggable="true" ondragstart="return dragDefine(event)" ondragend="dragEnd(event)">called</div>
+   <div id="word5" class="dragbox" draggable="true" ondragstart="return dragDefine(event)" ondragend="dragEnd(event)">Bobby</div>
+</div>			
+			<div id="rightDiv" ondragover="return dragOver(event)" ondrop="dragDropped(event)"></div>	
+		</section>
+	</body>
+</html>

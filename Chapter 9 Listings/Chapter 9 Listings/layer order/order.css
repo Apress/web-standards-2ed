@@ -1,0 +1,16 @@
+img {
+	position: absolute;
+	border: 1px solid black;
+	z-index: 1;
+}
+
+figcaption {
+	position: relative;
+	top: 170px;
+	left: 40px;
+	padding: 2px;
+	width: 120px;
+	background: #fff;
+	border: 1px solid black;
+	z-index: 2;
+}

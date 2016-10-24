@@ -1,0 +1,241 @@
+body {
+	background: #00254c url('images/bg.jpg') no-repeat 100% 0% fixed;	/* Listing 5-39. Background properties combined into a single background property; Listing 5-68. The declared background color overrides the initial value of that property defined by the CSS specification */
+	font-size: 1.2em;	/* Listing 5-66. The default font size of the entire website can be inherited from the document body */
+	color: #ffffff;
+}
+
+/* Listing 5-67. Specific declarations that override the default font size set in the previous Listing */
+h1 {
+  font-size: 1.4em;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3 {
+  font-size: 1em;
+}
+
+/* Listings 5-2 to 5-4 */
+p {
+  color: #898989;	/* Listing 5-3. Simple RGB notation example: color: rgb(0, 255, 0) :: An RGB(a) notation in CSS3: color: rgb(0, 255, 0, 0.25); */
+}
+
+/* Listing 5-5. A transparent color in HSL(a) notation */
+#warning {
+  background-color: hsl(240, 78%, 50%, 0.25);
+} 
+
+/* Listing 5-7. It is not optimal to declare rules of the same element separately
+h1 { font-weight: bold }
+h1 { font-size: 1.6em }
+h1 { font-family: Verdana }
+ */
+ 
+/* Listing 5-8. Rules of the same element should be grouped */
+h1 { 
+  font-weight: bold;
+  font-size: 1.6em;
+  font-family: Verdana;
+}
+
+/* Listing 5-9. A ruleset for all paragraphs */
+p { 
+  font-size: 1.2em;
+  font-family: Garamond;
+}
+
+/* Listing 5-11. Common rules can be grouped to avoid duplication */
+#articles, #relatedlinks {
+  color: white;
+  font-size: 1.8em;
+}
+
+/* Listing 5-12. Class selector example */
+.abstract { 
+  font-size: 1.1em;
+ }
+
+/* Listing 5-15. A rule for all paragraphs with the class name abstract */
+p.abstract {
+  font-size: 1.1em;
+ }
+
+/* Listing 5-16. An ID selector example */
+#main {
+  margin-left: 120px;
+}
+
+/* Listing 5-18. A universal selector example */
+*.caution {
+  color: #ff55ff;
+}
+
+/* Listing 5-21. An attribute selector example with an attribute */
+img[title] {
+  border-color: #ff0;
+}
+
+/* Listing 5-22. An attribute selector with an attribute and an attribute value */
+img[src="logo.png"] {
+  border: 10px;
+}
+
+/* Listing 5-24. Child selector example */
+td > a {
+  font-weight: bold;
+}
+
+/* Listing 5-27. Descendant selector example */
+td a {
+  font-weight: bold;
+}
+
+/* Listing 5-29. Adjacent sibling selector example */
+h2 + p {
+  color: #0f0;
+}
+
+/* Listing 5-33. Link color to be applied in case an anchor is being hovered over */
+a:hover { 
+  color: #ffa500; 
+}
+
+/* Listing 5-34. Link color set to visited hyperlinks */
+a:visited { 
+  color: #00cdcd; 
+}
+
+/* Listing 5-35. A rule for the first letter of paragraphs */
+p:first-letter { 
+  font-size: 2em; 
+}
+
+/* Listing 5-36. If several font properties should be set for the same element, the ruleset becomes too long
+p { 
+  font-weight: bold; 
+  font-size: 1em;
+  line-height: 1.2em; 
+  font-family: Garamond;
+  font-style: normal; 
+}
+*/
+
+/* Listing 5-37. Shorthand notation for font properties */
+p { font: bold 1em/1.2em Garamond }
+
+/* Listing 5-38. Separate background properties that can be shortened
+body {
+  background-color: #232323;
+  background-image: url('images/bg.jpg');
+  background-repeat: no-repeat; 
+  background-position: 100% 0%; 
+  background-attachment: fixed;
+}
+*/
+
+/* Listing 5-40. List styles that can be shortened */
+ul.tick {
+  list-style-image: url('tick.png');
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+/* Listing 5-42. Padding shorthand property with 4 values
+#decor {
+  padding: 10px 5px 20px 30px;
+}
+/*
+/* Listing 5-43. Padding shorthand property with 3 values */
+/* #decor {
+  padding: 10px 20px 15px;
+}
+*/
+/* Listing 5-44. Padding shorthand property with 2 values */
+/* #decor {
+  padding: 30px 20px;
+}
+*/
+/* Listing 5-45. Padding shorthand property with 1 value */
+#decor {
+  background-color: #236882; /* Just to see the padding */
+  padding: 10px;
+}
+
+/* Listing 5-46. Border properties that can be shortened
+.book {
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #000;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  border-left-color: #000;
+}
+*/
+
+/* Listing 5-47. The border-color shorthand property sets the border color of each side of the element
+.book {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000;
+}
+*/
+/* Listing 5-48. The shortest border declaration for multiple properties */
+.book {
+	border: 1px solid #aaa;
+}
+
+/*
+Listing 5-57. Rule for elements to be displayed as block
+display: block;
+
+Listing 5-58. Rule for elements to be displayed inline
+display: inline;
+
+Listing 5-59. Rule for elements to hide without spaceholder
+display: none;
+
+Listing 5-60. Rule for elements to hide with spaceholder
+visibility: hidden;
+*/
+
+/* Listing 5-61. A rule with the highest level of importance */
+#menu {
+  margin-top: 12px !important;
+}
+
+/* Listing 5-62. A rule in a CSS file which has more weight than the corresponding rule in the default style sheet of browsers */
+a {
+  color: #00ffff;
+}
+
+/* Listing 5-63. Declarations with increasing specificity */
+p {
+  color: #f9f;
+}
+
+div p {
+  color: #78ffab;
+}
+
+.tip p {
+  color: #efef10;
+}
+
+/* Listing 5-64. Inherited property value */
+#warning {
+  color: #000;
+}
+#warning a:link {
+  color: inherit;
+}
+
+/* Listing 5-65. Specific rules to eliminate underline for links declared by general rules */
+img {
+  border: 0;
+}
+
+a.nounder {
+  border-bottom: none;
+}
+
+/* Note. Since there are multiple declarations in the file for the same properties (such as the font color of paragraphs, only the last one will take affect. This is a collection of CSS rules presented in Chapter 5, not an optimal CSS file of an existing website. Font colors might differ from the ones presented in the book. */

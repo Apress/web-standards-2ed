@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>HTML5 Geolocation example</title>
+		<meta charset="UTF-8" />
+		<style>
+			#map{
+				width: 800px;
+				height: 600px;
+				margin: 0px auto;
+			}
+		</style>		
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>			
+			<div id="map"></div>
+			<script src="http://www.google.com/jsapi?key=ABQIAAAAlJFc1lrstqhgTl3ZYo38bBQcfCcww1WgMTxEFsdaTsnOXOVOUhTplLhHcmgnaY0u87hQyd-n-kiOqQ"></script>
+			<script type="text/javascript">
+				(function () {
+					google.load("maps", "2");
+					google.setOnLoadCallback(function () {
+						// Create map
+						var map = new google.maps.Map2(document.getElementById("map")),
+						markerText = "<h2>You are here</h2><p>This is your current position</p>",
+						markOutLocation = function (lat, long) {
+							var latLong = new google.maps.LatLng(lat, long),
+							marker = new google.maps.Marker(latLong);
+							map.setCenter(latLong, 15);
+							map.addOverlay(marker);
+							marker.openInfoWindow(markerText);
+							google.maps.Event.addListener(marker, "click", function () {
+								marker.openInfoWindow(markerText);
+							});
+						};
+						map.setUIToDefault();
+							// Check for geolocation support	
+						if (navigator.geolocation) {
+								// Get current position
+							navigator.geolocation.getCurrentPosition(function (position) {
+										// Successfully retrieved
+								markOutLocation(position.coords.latitude, position.coords.longitude);
+							}, 
+							function () {
+										// Geolocation fallback (Garden Island, Adelaide, Australia)
+								markerText = "<p>You should accept the Geolocation request, otherwise your position cannot be determined.</p>";
+								markOutLocation(59.3325215, 18.0643818);
+							});
+						}
+						else {
+							// No geolocation fallback (Rundle Mall, Adelaide, Australia)
+							markerText = "<p>No location support. Welcome to my favourite location.</p>";
+							markOutLocation(-34.928621, 138.599959);
+						} 
+					});	
+				})();
+			</script>
+		</section>
+	</body>
+</html>			

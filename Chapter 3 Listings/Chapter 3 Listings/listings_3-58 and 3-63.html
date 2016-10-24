@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+"http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+		<title>Listings 3-63</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+	</head>
+	<body>
+		<h1>Listings 3-63</h1>
+		<h2 id="math">MathML sample</h2>
+		<p>Math expression
+		<math xmlns="http://www.w3.org/1998/Math/MathML">	<!-- Listing 3-16. Namespace declaration in the body of a compound document -->
+			<mrow>
+				<mi>y</mi>
+				<mo>=</mo>
+				<mfrac>
+					<mn>1</mn>
+					<msqrt>
+						<mrow>
+							<msup>
+								<mi>x</mi>
+								<mn>2</mn>
+							</msup>
+							<mo>+</mo>
+							<mn>1</mn>
+						</mrow>
+					</msqrt>
+				</mfrac>
+			</mrow>
+		</math>
+		inside an XHTML paragraph.</p>
+		
+		<!-- Listing 3-58 -->
+		<math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
+		  <mrow>
+		  <mi>x</mi>
+		  <mo>=</mo>
+		  <mfrac>
+			<mrow>
+			  <mrow>
+				<mo>-</mo>
+				<mi>b</mi>
+			  </mrow>
+			  <mo>&#xB1;<!--PLUS-MINUS SIGN--></mo>
+			  <msqrt>
+				<mrow>
+				  <msup>
+					<mi>b</mi>
+					<mn>2</mn>
+				  </msup>
+				  <mo>-</mo>
+				  <mrow>
+					<mn>4</mn>
+					<mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+					<mi>a</mi>
+					<mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+					<mi>c</mi>
+				  </mrow>
+				</mrow>
+			  </msqrt>
+			</mrow>
+			<mrow>
+			  <mn>2</mn>
+			  <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+			  <mi>a</mi>
+			</mrow>
+			</mfrac>
+		  </mrow>
+		</math>
+		
+		<h2 id="svg">SVG sample</h2>
+		<p>
+			<svg:svg xmlns:svg="http://www.w3.org/2000/svg" width="5em" height="4em" viewBox="0 0 500 400" version="1.1"> <!-- Listing 3-16. Namespace declaration in the body of a compound document -->
+				<svg:title>A star</svg:title>
+				<svg:polygon style="fill:red; stroke:blue; stroke-width:10" 
+				points="210,46 227,96 281,97 238,129
+				254,181 210,150 166,181 182,129
+				139,97 193,97" />
+			</svg:svg>			
+		</p>
+		<p>
+		This is a sample code from the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+		</p>		
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Inline JavaScript example</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			function fourdigits(number) { 
+			  return (number < 1000) ? number + 1900 : number; 
+			}
+			var now = new Date();
+			var currentYear = fourdigits(now.getYear());
+
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<footer>
+		Copyright © <script type="text/javascript">document.write(currentYear);</script> John Smith
+		</footer>
+	</body>
+</html>

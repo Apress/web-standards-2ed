@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Drawing on the HTML5 canvas</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+			<p>
+				<canvas id="samplecanvas" width="200" height="200">A triangle (requires HTML5 Canvas support)</canvas>
+				<script>
+					var mycanvas = document.getElementById("samplecanvas"),
+					context2d = mycanvas.getContext("2d");
+					context2d.fillStyle = "#2ad3a8";	
+					context2d.beginPath();  
+					context2d.moveTo(100, 0);  
+					context2d.lineTo(0, 55);  
+					context2d.lineTo(165, 100);  
+					context2d.fill();
+				</script>
+			</p>
+		</section>
+	</body> 
+</html>

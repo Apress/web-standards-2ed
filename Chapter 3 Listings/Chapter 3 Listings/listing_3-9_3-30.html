@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- Listing 3-35 -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> <!-- Listing 3-37 and 3-38 -->
+  <head>
+    <title>An XHTML5 example (Listing 3-9)</title> <!-- Listing 3-41 -->
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" media="all" href="alt2.css" title="Alternative style 2" /> <!-- Listing 3-42 -->
+  </head>
+  <body>
+    <header>
+      <h1>Document sample</h1>
+    </header>
+    <section>
+      <article>
+        <h2>Article1</h2>
+          The first article of the document.
+      </article>
+      <article>
+        <h2>Article2</h2>
+        <p>Part of this <strong>bold text should be <em>italic as well</em></strong>. <br /> <!-- Listing 3-12 and 3-17 -->
+		This paragraph is the demonstration of properly nested elements.</p>
+		<p>This is another paragraph closed properly.</p>
+		<input type="checkbox" name="checkbox" id="checkbox" value="True" checked="checked" />	<!-- Listing 3-19 and 3-21 -->
+		
+		<script type="text/javascript"> <!-- Listing 3-23 -->
+		  <![CDATA[
+		  unescaped script content x&lt;y 
+		  ]]>
+		</script>
+		
+		<!-- Listing 3-24. A Comment -->
+
+		<!-- Listing 3-25 -->
+		<ul>
+		<li><a href="http://www.example.com/about/">About</a> <!-- correct --></li>
+		<li><a href="contact.htm">Contact</a> <!-- correct --></li>
+		</ul>
+
+		<p>
+		<!-- Listing 3-26 -->
+		<img src="/images/logo.png" width="128" height="128" alt="logo" /> <!-- correct -->
+		</p>
+
+		<!-- Listing 3-27. Block vs. Inline Elements -->
+		<div>
+		  <h1>Attention</h1>
+		  <p>View our <em>special offers</em> now!</p>
+		</div>
+
+		<!-- Listing 3-28. Content Attributes in the Markup -->
+		<div id="stunning" class="decoration"><p>…</p></div>
+
+		<!-- Listing 3-30. A Button That Displays the Current Time When the User Clicks on It -->
+		<p>Click the button to display the date.</p>
+		<p><button onclick="displayDate()">What’s the time?</button></p>
+		<script>
+		  function displayDate() {
+		  document.getElementById("demo").innerHTML = Date();
+		  }
+		</script>
+		<p id="demo"></p>
+		
+      </article>
+    </section>
+    <footer>
+      Copyright © 2015 John Smith. All rights reserved.
+    </footer>
+  </body>
+</html>

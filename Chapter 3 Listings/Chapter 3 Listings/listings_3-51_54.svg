@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">	<!-- Listing 3-27 -->
+	<rect x="10" y="10" rx="0" ry="0" width="80" height="80" fill="#898989" />
+	<circle cx="300" cy="100" r="90" stroke="#666" fill="#fff" />	<!-- Listing 3-29 -->
+	<ellipse cx="600" cy="100" rx="120" ry="80" fill="blue" />	<!-- Listing 3-30 -->
+	<!-- This is a sample code from the book “Web standards – Mastering HTML5, CSS3, and XML”. -->
+</svg>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Embedding Flash in XHTML</title>
+	</head>
+	<body>
+		<h1>Flash Satay</h1>
+		<p>
+		Listing 9-10. Embedding Flash using Flash Satay
+		</p>
+		<p>
+			<object type="application/x-shockwave-flash" data="http://lesliesikos.com/flash/header.swf" width="610" height="224" id="flash">
+			  <param name="movie" value="http://lesliesikos.com/flash/header.swf" />
+			  <param name="wmode" value="opaque" />	<!-- Listing 9-9. Setting the wmode for non-transparent Flash contents -->
+			</object>
+		</p>
+		<p>
+		Listing 9-15. Embedding a Flash video using Flash Satay
+		</p>
+		<p>
+			<object type="application/x-shockwave-flash" data="http://video.google.com/videoplay?docid=4226784084458819393#" width="400" height="326" id="VideoPlayback">
+			  <param name="movie" value="http://video.google.com/videoplay?docid=4226784084458819393#" />
+			  <param name="allowFullScreen" value="true" />
+			  <param name="allowScriptAccess" value="always" />
+			</object>
+		</p>
+		<p>		
+		Listing 9-16. Embedding a WMV video file
+		</p>
+		<p>
+			<object type="video/x-ms-wmv" data="http://www.example.com/dreamcar.wmv" width="320" height="260">
+			  <param name="src" value="http://www.example.com/dreamcar.wmv" />
+			  <param name="autostart" value="true" />
+			  <param name="controller" value="true" />
+			</object>
+		</p>
+		<p>
+		Listing 9-17. Embedding a QuickTime video file
+		</p>
+		<p>
+			<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" width="352" height="288">
+			  <param name="src" value="http://www.example.com/video/dreamcars.mov" />
+			  <param name="controller" value="true" />
+			  <param name="autoplay" value="false" />
+			  <!--[if !IE]>-->
+				<object type="video/quicktime" data="http:// www.example.com/video/dreamcars.mov" width="352" height="288">
+				<param name="autoplay" value="false" />
+				<param name="controller" value="true" />
+			  </object>
+			  <!--<![endif]-->
+			</object>
+		</p>		
+	</body>
+</html>

@@ -1,0 +1,42 @@
+/* Listing 5-68. Border Radii Set Individually for the Four Corners */  
+div#borderradiusdemo {
+  border: 2px solid;
+  border-top-left-radius: 2.4em;
+  border-top-right-radius: 1.8em;
+  border-bottom-right-radius: 3em;
+  border-bottom-left-radius: 1em;
+}
+
+/* Listing 5-69. Identical Border Radius for All Corners */  
+div#borderradiusshorthand {
+  border: 2px solid;
+  border-radius: 25px;
+}
+
+div#borderradiusdemo, div#borderradiusshorthand {
+  width: 600px;
+  height: 200px;
+  margin: 2em;
+  text-align: center;
+  background: #4879b5;
+  color: #fff;
+  box-shadow: 10px 10px 5px #848484; /* Listing 5-70 */
+}
+
+div#borderradiusdemo h2, div#borderradiusshorthand h2 {
+  padding-top: 1em;
+  text-shadow: 2px 3px 5px #00f; /* Listing 5-71 */
+}
+
+h1 {
+  text-shadow: 0 1px 0 #000, 0 -1px 0 #000, 1px 0 0 #000, -1px 0 0 #000; /* Listing 5-72 */
+  color: #fff;
+}
+
+div#borderradiusdemo:hover {	/* Listing 5-75 */
+  width: 500px;
+}
+
+div#borderradiusdemo {
+  transition: width 2s, height 2s, transform 2s; /* Listing 5-76. Transition Effects for Width, Height, and Transformation */
+}

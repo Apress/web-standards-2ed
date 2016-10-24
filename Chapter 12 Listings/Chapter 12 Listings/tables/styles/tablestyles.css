@@ -1,0 +1,10 @@
+/* Listing 12-15. Set borders to collapse */
+table {
+	border-collapse: collapse;
+}
+
+/* Listing 12-16. Padding and border for header and data cells */
+th, td {
+	padding: 10px;
+	border: 1px solid #13b141;
+}

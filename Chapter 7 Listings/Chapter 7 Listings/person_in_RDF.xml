@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a sample code from the book “Web standards – Mastering HTML5, CSS3, and XML”. -->
+<rdf:RDF 
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns="http://www.example.com/johnsmith/contact.rdf#">
+  <foaf:Person rdf:about="http://www.example.com/johnsmith/contact.rdf#johnsmith">
+    <foaf:mbox rdf:resource="mailto:john.smith@example.com" />
+    <foaf:homepage rdf:resource="http://www.example.com/johnsmith/" />
+    <foaf:family_name>Smith</foaf:family_name>
+    <foaf:givenname>John</foaf:givenname>
+  </foaf:Person>
+</rdf:RDF>

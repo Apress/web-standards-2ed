@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Web Storage example</title>
+		<meta charset="UTF-8" />	
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>
+			<h2>localStorage</h2>
+			<p>Current value (localStorage): <span id="lsresult">not set</span></p>
+			<p>
+				<input id="setls" type="button" value="Set localStorage">
+				<input id="clearls" type="button" value="Clear localStorage">
+			</p>
+			<script>
+				(function () {
+					function displayLocalStorageResults () {
+						var localStorageVal = localStorage["flower"];
+						document.getElementById("lsresult").innerHTML = (localStorageVal)? localStorageVal : "not set";
+					}
+					displayLocalStorageResults();
+				
+					document.getElementById("setls").onclick = function () {
+						localStorage["flower"] = "rose";
+						displayLocalStorageResults();
+					};
+					
+					document.getElementById("clearls").onclick = function () {
+						localStorage.clear();
+						displayLocalStorageResults();
+					};
+				})();
+			</script>
+			<h2>sessionStorage</h2>
+			<p>Current value (sessionStorage): <span id="ssresult">not set</span></p>
+			<p>
+				<input id="setss" type="button" value="Set sessionStorage">
+				<input id="clearss" type="button" value="Clear sessionStorage">
+			</p>
+			<script>
+				(function () {
+					function displaySessionStorageResults () {
+						var sessionStorageVal = sessionStorage["favorite"];
+						document.getElementById("ssresult").innerHTML = (sessionStorageVal)? sessionStorageVal : "not set";
+					}
+					displaySessionStorageResults();
+					
+					document.getElementById("setss").onclick = function () {
+						sessionStorage["favorite"] = "violet";
+						displaySessionStorageResults(sessionStorage["flower"]);
+					};
+					
+					document.getElementById("clearss").onclick = function () {
+						sessionStorage.clear();
+						displaySessionStorageResults("(no value)");
+					};
+				})();
+			</script>			
+		</section>
+	</body>
+</html>

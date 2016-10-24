@@ -1,0 +1,10 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+<http://www.example.com> dc:creator "\r\n      John J. Smith\r\n    ";
+	dc:date "\r\n      2011-08-30\r\n\t";
+	dc:description "\r\n      The website of Web developer John J. Smith. Standard-compliant HTML5 and CSS3, semantic annotations, Linked Open Data, Web accessibility, …\r\n    ";
+	dc:format "\r\n      664 bytes\r\n    ",
+		"\r\n      text/html\r\n    ";
+	dc:subject "\r\n      John J. Smith, Web developer, HTML5, CSS3, mobile Web, WCAG\r\n    ";
+	dc:title "\r\n      John J. Smith Web developer\r\n    ";
+	dc:type "\r\n      Text\r\n    ".

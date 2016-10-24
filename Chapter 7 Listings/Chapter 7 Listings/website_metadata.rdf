@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a sample code from the book “Web standards – Mastering HTML5, CSS3, and XML”. -->
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="http://www.example.com">
+    <dc:title>
+      John J. Smith Web developer
+    </dc:title>
+    <dc:creator>
+      John J. Smith
+    </dc:creator>
+    <dc:subject>
+      John J. Smith, Web developer, HTML5, CSS3, mobile Web, WCAG
+    </dc:subject>
+    <dc:description>
+      The website of Web developer John J. Smith. Standard-compliant HTML5 and CSS3, semantic annotations, Linked Open Data, Web accessibility, …
+    </dc:description>
+    <dc:date>
+      2011-08-30
+	</dc:date>
+    <dc:type>
+      Text
+    </dc:type>
+    <dc:format>
+      text/html
+    </dc:format>
+    <dc:format>
+      868 bytes
+    </dc:format>
+  </rdf:Description>
+</rdf:RDF>

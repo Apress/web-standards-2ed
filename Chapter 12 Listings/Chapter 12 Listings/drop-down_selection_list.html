@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Accessible drop-down selection list</title>
+		<meta charset="UTF-8" />
+		<base href="http://www.example.com/" />
+		<script type="text/javascript">
+		  function goto_URL(object) {
+			window.location.href=object.options[object.selectedIndex].value;
+		  }
+		</script>
+	</head>
+	<body>
+		<h1>Accessible drop-down selection list</h1>
+		<form>
+		  <select id="langsel">
+			<option value="http://www.example.com" selected="selected">English</option>
+			<option value="http://de.example.com">Deutsch</option>
+			<option value="http://fr.example.com">Français</option>
+			<option value="http://es.example.com">Español</option>
+			<option value="http://ja.example.com">本語</option>
+		  </select>
+		  <input type="button" value="Go!" onclick="goto_URL(this.form.langsel);" />
+		</form>
+	</body> 
+</html>

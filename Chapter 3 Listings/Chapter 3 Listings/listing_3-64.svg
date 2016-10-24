@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC 
+"-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+"http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd"[
+<!ENTITY % SVG.prefixed "IGNORE" >
+<!ENTITY % XHTML.prefixed "INCLUDE" >
+<!ENTITY % XHTML.prefix "xhtml" >
+<!ENTITY % MATHML.prefixed "INCLUDE" >
+<!ENTITY % MATHML.prefix "math" >
+]>
+<svg version="1.1" xml:lang="en"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>SVG as the host language</desc>
+	<!-- ... SVG content ... -->
+	<switch>
+		<foreignObject width="800px" height="600px">
+			<xhtml:p xmlns:xhtml="http://www.w3.org/1999/xhtml">
+			<!-- ... XHTML content ... -->
+			<math:math xmlns:math="http://www.w3.org/1998/Math/MathML">
+			<!-- ... MathML content ... -->
+			</math:math>
+			<!-- ... XHTML content ... -->
+			</xhtml:p>
+		</foreignObject>
+	</switch>
+	<!--... SVG content ... -->
+	
+	<!-- This is a sample code from the book “Web standards – Mastering HTML5, CSS3, and XML”. -->
+	
+</svg>

@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Lists (step by step)</title>
+		<meta charset="UTF-8" />		
+		<link rel="stylesheet" type="text/css" href="styles/liststyles.css" />	
+	</head>
+	<body>
+		<h1>A simple unordered list</h1>	<!-- Listing 12-1 -->
+		<ul>
+		  <li>Apricot</li>
+		  <li>Cherry</li>
+		  <li>Peach</li>
+		</ul>
+		<h1>An unordered list with improved accessibility</h1>
+		<ul id="navtabs">
+		  <li id="first">	<!-- Listing 12-6 -->
+			<a href="/" title="Home" accesskey="h" tabindex="1"><span class="ak">H</span>ome</a>
+		  </li>		
+		  <li>
+			<a href="about/" title="Introduction" accesskey="a" tabindex="2"><span class="ak">A</span>bout</a>
+		  </li>
+		  <li>
+			<a href="gallery/" title="Gallery" accesskey="g" tabindex="4"><span class="ak">G</span>allery</a>
+		  </li>
+		  <li>
+			<a href="shop/" title="Webstore of oil paintings" accesskey="s" tabindex="6"><span class="ak">S</span>hop</a>
+		  </li>
+		  <li>
+			<a href="exhibition/" title="Exhibitions" accesskey="e" tabindex="7"><span class="ak">E</span>xhibitions</a>
+		  </li>
+		  <li id="last">	<!-- Listing 12-6 -->
+			<a href="contact/" title="Address and phone" accesskey="c" tabindex="7"><span class="ak">C</span>ontact</a>
+		  </li>
+		</ul>		
+		<h1>A definition list</h1> <!-- Listing 12-2 -->
+		<dl>
+		  <dt>
+			<label>Website development</label>
+		  </dt>
+		  <dt>RDF</dt>
+			<dd>A W3C acronym for Resource Description Framework, an XML specification for metadata models.</dd>
+		  <dt>RSS</dt>
+		  <dd>Really Simple Syndication. An XML format for frequently updated content, e.g., news headlines, blog entries.</dd>
+		</dl>
+		<!-- Listing 12-13. Application of the custom bullet style presented in Listing 12-12 -->
+		<h1>The major benefits of standard compliance</h1>
+		<ul class="tick">
+		<li>Resolution independence</li>
+		<li>Browser independence</li>
+		<li>Interoperability</li>
+		<li>Robust functionality</li>
+		</ul>
+		<p>
+		This is a sample code from the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+		</p>		
+	</body> 
+</html>

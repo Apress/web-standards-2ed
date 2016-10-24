@@ -1,0 +1,27 @@
+body {
+	background-color:#004c25;
+	color: #cff;
+	font-family: "Garamond", serif;
+	font-size: 1.2em;
+}
+
+#wrapper {
+	width: 800px;
+	margin: auto;
+}
+
+#wrapper a:link {
+	color: #ff0;
+}
+
+#wrapper a:hover {
+	color: #ffa000;
+}
+
+#wrapper a:visited {
+	color: #fff;
+}
+
+#colorswitch a:link {
+	padding: 10px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tab order demo</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			li {
+			  display: inline;
+			  padding: 10px;
+			}
+		</style>
+	</head>	
+	<body>
+		<h1>Listing 10-2. Tab order declared for the menu, search box, and Flash header of a web page</h1>
+		<ul>
+		  <li>
+			<a href="http://www.example.com/" title="Home" accesskey="h" tabindex="1">
+			 <span class="ak">H</span>ome</a>			
+		  </li>		
+		  <li>
+			<a href="about/" title="Introduction" accesskey="a" tabindex="2">
+			 <span class="ak">A</span>bout</a>
+		  </li>
+		  <li>
+			<a href="services/" title="Wedding photography" accesskey="s" tabindex="3">
+			 <span class="ak">S</span>ervices</a>
+		  </li> 
+		  <li>
+			<a href="portfolio/" title="Samples and testimonials" accesskey="p" tabindex="4">
+		<span class="ak">P</span>ortfolio</a>
+		  </li>		  
+		  <li>
+			<a href="contact/" title="Address, mail, and phone" accesskey="c" tabindex="5">
+		<span class="ak">C</span>ontact</a>
+		  </li>
+		</ul>
+		<form method="get" action="http://www.google.com/search">
+		  <fieldset>
+			<label for="q">Search query</label>
+			<input type="text" name="q" id="q" size="19" maxlength="255" value="Type to search" tabindex="6" />
+			<input type="submit" name="btnG" value="Search" tabindex="7" />
+			<input type="hidden" name="domains" value="http://www.example.com/" />
+			<input type="hidden" name="sitesearch" value="http://www.example.com/" />
+		  </fieldset>
+		</form>
+		<object type="application/x-shockwave-flash" data="http://lesliesikos.com/flash/header.swf" width="610" height="224" id="flash" tabindex="8">
+		  <param name="movie" value="http://lesliesikos.com/flash/header.swf" />
+		  <param name="wmode" value="transparent" />
+		  <div>
+			<a href="longdesc/"><img src="images/alter.jpg" alt="The image alternative for the flash header." /></a>
+		  </div>
+		</object>
+		<p>
+		This is a sample code from the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+		</p>		
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Web Workers example</title>
+		<meta charset="UTF-8" />	
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>
+			<h2>Start/Stop the Worker</h2>
+			<p>	
+				<input id="start" type="button" value="Start">
+				<input id="stop" type="button" value="Stop">
+			</p>
+			<h2>The results</h2>
+			<p id="result">Click Start to start the Worker</p>
+			<script>
+				(function () {
+					function createWorker () {
+						worker = new Worker("webworker.js");
+					}				
+					document.getElementById("start").onclick = function () {
+						createWorker();
+						worker.postMessage(0);	// initial value				
+						worker.onmessage = function (evt) {
+							document.getElementById("result").innerHTML = evt.data;
+						};
+						worker.onerror = function (evt) {
+							document.getElementById("result").innerHTML = "Error";
+						};
+					};
+					document.getElementById("stop").onclick = function () {
+						if (worker) {
+							worker.terminate();
+						}
+					};
+				})();
+			</script>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>HTML5 Microdata Demo</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<header>
+			<h1>HTML5 microdata demo</h1>
+		</header>
+		<section>
+			<p>
+			This is a demonstration file of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+
+			<!-- Listing 7-26. Describing a person with microdata  -->
+			<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Person"> 
+			  <span itemprop="name">John Smith</span> lives in Adelaide, Australia and works as a 
+			  <span itemprop="title">Senior Developer</span> at 
+			  <span itemprop="affiliation">LS Inc</span>.
+			</div>
+
+			<!-- Listing 7-27. Describing a sport event with microdata -->
+			<div>
+			<a href="http://www.example.com/news.htm">National flyball competition</a>
+			<img src="flyball.jpg" alt="Flyball" />
+			The national flyball competition is approaching.
+			When: Nov 13, 9:00AM—12:00AM
+			Where: Dog Park, 123 Arena Eve, Melbourne, VIC
+			Category: Sport
+			</div>
+
+			<!-- Listing 7-28. Describing the image license with microdata -->
+			<figure itemscope="itemscope" itemtype="http://schema.org/License" itemref="licenses">
+			  <img itemprop="name" src="images/amdb9.jpg" alt="My Aston Martin DB9.">
+			  <figcaption itemprop="title">The DB9.</figcaption>
+			</figure>
+			<footer>
+			  <p id="licenses">All images are licensed under the <a itemprop="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Share Alike license</a>.
+			  </p>
+			</footer>
+
+			<!-- Listing 7-89. Combining hCard with microdata -->
+			<dl class="vcard" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+			  <dt class="fn" itemprop="name"><a href="http://example.com" 
+			   itemprop="url">John Smith</a></dt>
+			  <dd class="title" itemprop="title">Photographer</dd>
+			  <dd class="adr" itemprop="address" itemscope 
+			   itemtype="http://data-vocabulary.org/Address"><span class="locality" 
+			   itemprop="locality">Memphis</span>, <abbr title="Tennessee" class="region" 
+			   itemprop="region">TN</abbr>
+			  <span class="postal-code" itemprop="postal-code">38145</span></dd>
+			</dl>
+
+		</section>
+	</body> 
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#"
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:google="http://rdf.data-vocabulary.org/#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:wot="http://xmlns.com/wot/0.1/"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.example.com/metadata/foaf.rdf">
+    <foaf:title>Mr</foaf:title>
+    <foaf:givenname>John</foaf:givenname>
+    <foaf:surname>Smith</foaf:surname>
+    <foaf:name>John J. Smith</foaf:name>
+    <google:name>John Smith</google:name>
+    <foaf:gender>male</foaf:gender>
+    <foaf:depiction rdf:resource="http://www.example.com/images/js.jpg"/>
+    <google:photo rdf:resource="http://www.example.com/images/js.jpg"/>
+    <foaf:based_near rdf:resource="http://dbpedia.org/resource/Adelaide"/>
+    <contact:nearestAirport rdf:resource="http://www.adelaideairport.com.au/"/>
+    <foaf:phone rdf:resource="tel:+61123456789"/>
+    <foaf:homepage rdf:resource="http://www.example.com"/>
+    <google:url rdf:resource="http://www.example.com"/>
+    <foaf:holdsAccount rdf:resource="http://www.linkedin.com/in/jsmith"/>
+    <foaf:holdsAccount rdf:resource="http://www.facebook.com/jsmith"/>
+    <foaf:holdsAccount rdf:resource="http://www.flixster.com/user/jsmith"/>
+    <foaf:holdsAccount rdf:resource="http://www.myspace.com/john.smith"/>
+    <foaf:holdsAccount rdf:resource="http://www.twitter.com/smithj"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Photography"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Art"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Internationalization_and_localization"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Literature"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Classical_music"/>
+    <foaf:interest rdf:resource="http://dbpedia.org/resource/Scalable_Vector_Graphics"/>
+    <rdfs:seeAlso rdf:resource="http://www.example.com/metadata/foaf.rdf"/>
+    <rdfs:seeAlso rdf:resource="http://www.example.com/metadata/doac.rdf"/>
+    <rdfs:seeAlso rdf:resource="http://www.example.com/metadata/metadata.rdf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://rdf.data-vocabulary.org/#Person"/>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+    <owl:sameAs rdf:resource="http://www.example.com/about/"/>
+    <foaf:publications rdf:resource="http://www.example.com/metadata/doac.rdf"/>
+    <foaf:knows rdf:resource="http://www.myfriend.com/foaf.rdf"/>
+    <foaf:knows rdf:resource="http://www.mysecondfriend/metadata/foaf.rdf"/>
+    <foaf:knows rdf:resource="http://www.mythirdbuddy/metadata/foaf.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/metadata/foaf.rdf">
+    <rdfs:seeAlso rdf:resource="http://www.example.com/metadata/doac.rdf"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-08-22</dc:date>
+    <dc:creator>John Smith</dc:creator>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/PersonalProfileDocument"/>
+    <xhv:stylesheet rdf:resource="http://www.example.com/jsmith.css"/>
+    <wot:assurance rdf:resource="http://www.example.com/signature.asc"/>
+    <foaf:primaryTopic rdf:resource="http://www.example.com/about/"/>
+    <dc:title>John J. Smith – Web developer</dc:title>
+  </rdf:Description>
+</rdf:RDF>

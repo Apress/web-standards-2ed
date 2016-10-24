@@ -1,0 +1,11 @@
+@import ("main.css");
+
+body {
+	background-color: #000;
+	font-size: 2em;  
+}
+
+#wrapper a:hover {
+	color: #ff2121;
+}
+

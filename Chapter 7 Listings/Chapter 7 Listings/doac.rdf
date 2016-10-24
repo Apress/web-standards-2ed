@@ -1,0 +1,72 @@
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:admin="http://webns.net/mvcb/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:doac="http://ramonantonio.net/doac/0.1/#"> 
+	<foaf:Person>
+	   <foaf:name>John Smith</foaf:name>
+	   <foaf:homepage rdf:resource="http://www.example.com" />
+		<foaf:publications>
+		   <foaf:document>
+			<dc:title>Web design myths</dc:title>
+			<dc:creator>John Smith</dc:creator>
+			<dc:publisher>XY Publisher</dc:publisher>
+			<dc:date>2011</dc:date>
+			<dc:language>eng</dc:language>
+			<dc:description>A best-seller book written by John Smith about Web design.</dc:description>
+		   </foaf:document>
+		</foaf:publications>
+		<foaf:publications>
+		   <foaf:document>
+			<dc:title>X Expo ’10</dc:title>
+			<dc:creator>John Smith</dc:creator>
+			<dc:publisher>Best Sites Inc.</dc:publisher>
+			<dc:date>2010</dc:date>
+			<dc:language>eng</dc:language>
+			<dc:description>The official website of X Expo 2010 designed by John Smith.</dc:description>
+		   </foaf:document>
+		</foaf:publications>
+	   <doac:experience>
+		  <doac:VolunterExperience>
+			 <doac:title>Web designer</doac:title>
+			 <doac:organization>Best Sites Web Agency</doac:organization>
+			 <doac:start-date>2005-09-01</doac:start-date>
+			 <doac:end-date>2011-08-31</doac:end-date>
+		  </doac:VolunterExperience>
+	   </doac:experience>
+	   <doac:education>
+		  <doac:Degree>
+			 <doac:title>B.Sc. in Computer Science</doac:title>
+			 <doac:organization>A. B. College</doac:organization>
+			 <doac:start-date>2000-09-01</doac:start-date>
+			 <doac:end-date>2003-06-15</doac:end-date>
+		  </doac:Degree>
+	   </doac:education>
+	   <doac:education>
+		  <doac:Degree>
+			 <doac:title>M.Sc. in Information Technology</doac:title>
+			 <doac:organization>X. Y. University</doac:organization>
+			 <doac:start-date>2003-09-01</doac:start-date>
+			 <doac:end-date>2005-08-31</doac:end-date>
+		  </doac:Degree>
+	   </doac:education>
+	   <doac:skill>
+		  <doac:LanguageSkill>
+			 <doac:language>en</doac:language>
+			 <doac:reads rdf:resource="http://ramonantonio.net/doac/0.1/#nativelevel"/>
+			 <doac:writes rdf:resource="http://ramonantonio.net/doac/0.1/#nativelevel"/>
+			 <doac:speaks rdf:resource="http://ramonantonio.net/doac/0.1/#nativelevel"/>
+		  </doac:LanguageSkill>
+	   </doac:skill>
+	   <doac:skill>
+		  <doac:LanguageSkill>
+			 <doac:language>de</doac:language>
+			 <doac:reads rdf:resource="http://ramonantonio.net/doac/0.1/#highlevel"/>
+			 <doac:writes rdf:resource="http://ramonantonio.net/doac/0.1/#highlevel"/>
+			 <doac:speaks rdf:resource="http://ramonantonio.net/doac/0.1/#highlevel"/>
+		  </doac:LanguageSkill>
+	   </doac:skill>
+	</foaf:Person>
+</rdf:RDF>

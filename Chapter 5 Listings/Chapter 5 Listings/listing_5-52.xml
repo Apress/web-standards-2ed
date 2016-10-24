@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/css" href="chapter5.css" title="Default style" ?>
+<sample>
+	<caption>Listing 5-52. Link to an external style sheet file in XML</caption> 
+	<body>
+		<demo>
+			<![CDATA[ This is a demonstration of Listing 5-52 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>. ]]>
+		</demo>
+	</body>
+</sample>

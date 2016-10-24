@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<mx:Application xmlns:mx="http://www.macromedia.com/2003/mxml">
+
+ <mx:HTTPService id="httpRSS" url="http://www.example.com/rss/" resultFormat="object" />
+
+ <mx:Panel id="reader" title="Simple RSS Reader" width="600">
+
+  <mx:DataGrid id="entries" width="{reader.width-15}" dataProvider="{httpRSS.result.rss.channel.item}" cellPress="{body.htmlText=httpRSS.result.rss.channel.item[entries.selectedIndex].description}">
+    <mx:columns>
+      <mx:Array>
+        <mx:DataGridColumn columnName="title" headerText="Title" />
+        <mx:DataGridColumn columnName="pubDate" headerText="Date" />
+      </mx:Array>
+    </mx:columns>	
+  </mx:DataGrid>
+
+  <mx:TextArea id="body" editable="false" width="{reader.width-15}" height="400" />
+
+  <mx:Button label="Load RSS channel items" click="{httpRSS.send()}" />
+  
+ </mx:Panel>
+</mx:Application>
+
+<!-- This is a sample code from the book “Web standards – Mastering HTML5, CSS3, and XML”. -->

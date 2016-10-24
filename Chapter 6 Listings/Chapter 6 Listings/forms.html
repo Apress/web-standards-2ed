@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Inline JavaScript example</title>
+		<meta charset="UTF-8">		
+	</head>
+	<body>
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>
+			<h2>Create new account</h2>
+			<form action="newaccount.php" method="post">
+				<fieldset title="Create account">
+					<p>
+						<label for="mailadd">E-mail address:</label>
+						<input id="mailadd" type="email" required="required" name="mail" placeholder="email@example.com" />
+					</p>
+					<p>
+						<label for="passwd1">Password:</label>
+						<input id="passwd1" type="password" required="required" name="pwd" />
+					</p>
+					<p>
+						<label for="passwd2">Confirm password:</label>
+						<input id="passwd2" type="password" required="required" name="pwd2" />
+					</p>
+					<p>
+						<label for="website">Website:</label> 
+						<input type="url" name="website" placeholder="http://www.example.com" />
+					</p>
+					<p>
+						<label for="number">Number:</label> 
+						<input type="number" name="number" min="0" max="10" placeholder="0-10" />
+					</p>
+					<p>
+						<label for="range">Range:</label> 
+						<input type="range" name="range" min="0" max="10" step="2" />
+					</p>
+					<p>
+						<input type="submit" value="Create account" />
+					</p>
+				</fieldset>
+			</form>
+		</section>	
+	</body>
+</html>

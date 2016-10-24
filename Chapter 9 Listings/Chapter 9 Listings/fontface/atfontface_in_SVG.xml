@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">  
+  <defs>
+    <style>
+      <![CDATA[ 
+		@font-face {
+		  font-family: Calluna;
+		  src: url('fonts/Calluna-Regular.otf');
+		} 
+	]]>
+    </style>
+  </defs>
+  <text x="20"  y="40" style="font-family: Calluna, serif; font-size: 1.2em; stroke: #0f0; fill: #0f0;">SVG text with Web Fonts</text>
+</svg>

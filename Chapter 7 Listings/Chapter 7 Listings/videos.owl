@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://example.org/">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://xmlns.com/foaf/0.1/</Import>
+    <Import>http://purl.org/dc/terms/</Import>
+    <Import>http://purl.org/dc/elements/1.1/</Import>
+    <Import>http://creativecommons.org/schema.rdf</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Example Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">John Smith</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A very short Example Ontology demo file for the book “Web standards”. Real-world ontologies contains hunderds or thousands of properties and relationships.</Literal>
+    </Annotation>
+    
+    <Declaration>
+        <DataProperty IRI="http://example.com/videos.owl#width"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://example.com/videos.owl#windowboxed"/>
+    </Declaration>
+   
+
+   <EquivalentClasses>
+        <Class IRI="http://example.com/videos.owl#lector"/>
+        <Class IRI="http://example.com/videos.owl#narrator"/>
+    </EquivalentClasses>
+
+
+    <SubClassOf>
+        <Class IRI="http://creativecommons.org/ns#License"/>
+        <Class IRI="http://purl.org/dc/terms/LicenseDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://xmlns.com/foaf/0.1/Project"/>
+        <Class abbreviatedIRI=":Thing"/>
+    </SubClassOf>
+	
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://example.com/videos.owl#cinematographerOf"/>
+        <ObjectProperty IRI="http://example.com/videos.owl#directorOfPhotographyOf"/>
+    </EquivalentObjectProperties>
+
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://xmlns.com/foaf/0.1/currentProject"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+	
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://example.com/videos.owl#optionalSupportFor"/>
+        <Class IRI="http://example.com/videos.owl#Media"/>
+    </ObjectPropertyRange>
+	
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://example.com/videos.owl#AC-3"/>
+        <DataProperty IRI="http://example.com/videos.owl#DolbyDigital"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://example.com/videos.owl#H.264"/>
+        <DataProperty IRI="http://example.com/videos.owl#MPEG-4AVC"/>
+    </EquivalentDataProperties>
+
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://purl.org/dc/terms/available"/>
+        <DataProperty IRI="http://example.com/videos.owl#commercial"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://purl.org/dc/terms/created"/>
+        <DataProperty IRI="http://example.com/videos.owl#produced"/>
+    </SubDataPropertyOf>
+ 
+    <DataPropertyDomain>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/surname"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </DataPropertyDomain>
+	
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.publistontology.com/publist.owl#status</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The publication status such as released or upcoming.</Literal>
+    </AnnotationAssertion>
+	
+</Ontology>

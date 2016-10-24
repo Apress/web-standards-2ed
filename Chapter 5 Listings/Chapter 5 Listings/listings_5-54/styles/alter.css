@@ -1,0 +1,5 @@
+@import ("main.css");
+
+body {
+  background-color:#00254c;	/* Overrides the background color declared in main.css. All other styles are re-used from main.css. */
+}

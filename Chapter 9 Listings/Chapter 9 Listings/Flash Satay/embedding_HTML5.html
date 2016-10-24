@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Object embedding in (X)HTML5</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<header>
+			<h1>Embedding Flash</h1>
+		</header>
+		<section>
+			<p>
+			Listing 9-11. Basic Flash embedding in (X)HTML5
+			</p>
+			<embed src="http://lesliesikos.com/flash/header.swf" width="610" height="224" />
+		</section>
+		<header>
+			<h1>Embedding audio</h1>
+		</header>
+		<section>
+			<p>
+			Listing 9-12. Basic audio embedding in (X)HTML5
+			</p>
+			<audio src="valerie.mp3">
+			</audio>
+			<p>
+			Listing 9-13. Alternate content for audio
+			</p>
+			<audio src="valerie.mp3" controls="controls">
+			  <p><a href="valerie.mp3">Valerie by Joy</a></p>
+			</audio>
+			<p>
+			Listing 9-14. Multiple source declaration for different formats
+			</p>
+			<audio controls="controls">
+			  <source src="valerie.mp3" type="audio/mpeg" />
+			  <source src="valerie.ogg" type="audio/ogg" />
+			  <p><a href="valerie.mp3">Valerie by Joy</a></p>
+			</audio>
+		</section>
+		<header>
+			<h1>Embedding video</h1>
+		</header>
+		<section>
+			<p>
+			Listing 9-18. Basic video embedding in (X)HTML5
+			</p>
+			<video src="sample.mp4">
+			</video>
+			<p>
+			Listing 9-19. Additional proporties and alternate content for an (X)HTML5 video embedding
+			</p>
+			<video src="sample.ogv" width="320" height="240" poster="sample.jpg">
+			  <p>Download the <a href="video.ogv">sample video</a> (OGV, 5.34 MB)</p>
+			</video>
+			<p>
+			Listing 9-20. Controls set to be displayed for the (X)HTML5 video embedding
+			</p>
+			<video src="xyz.mov" controls="controls">
+			</video>
+			<p>
+			Listing 9-21. The same video in different formats
+			</p>
+			<video>
+			  <source src="video.mp4" type="video/mp4" />
+			  <source src="video.ogv" type="video/ogg" />
+			  <p>Download the <a href="video.ogv">sample video</a> (OGV)</p>
+			</video>
+			<p>
+			Listing 9-22. Declaring video codecs in (X)HTML5
+			</p>
+			<video controls="controls">
+			  <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+			  <source src="video.ogv" type='video/ogg; codecs="theora, vorbis"' />
+			  <p>Download the <a href="video.ogv">sample video</a></p>
+			</video>
+			<p>
+			Listing 9-23. Video plackback support detection in (X)HTML5
+			</p>
+			<video controls="controls">
+			  <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+			  <source src="video.ogv" type='video/ogg; codecs="theora, vorbis"' onerror="fallback(this.parentNode)" />
+			  <p>Download the <a href="video.ogv">sample video</a> (OGV)</p>
+			</video>
+			<p>
+			Listing 9-24. MPEG-4 plackback
+			</p>
+			<video controls="controls">
+			  <source src="video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' onerror="fallback(this.parentNode)" />
+			  <object data="videoplayer.swf">
+				<param name="flashvars" value="video.mp4" />
+				<p>Download the <a href="video.ogv">sample video</a> (OGV)</p>
+			  </object>
+			</video>
+			<p>
+			Listing 9-25. Loading video on user click
+			</p>
+			<video controls="controls">
+			  Video not supported
+			</video>
+			<input type="button" value="Load video" onclick="document.getElementsByTagName('video')[0].src = 'video.mp4';" />
+			<p>
+			Listing 9-26. Customized video controls 
+			</p>
+			<script>
+			  var video = document.getElementsByTagName('video')[0];
+			</script>
+			<input type="button" value="Play" onclick="video.play()" />
+			<input type="button" value="Pause" onclick="video.pause()" />
+			<p>
+			Listing 9-27. Video playback to be started automatically
+			</p>
+			<video src="abc.mp4" autoplay="autoplay"></video>
+			<p>
+			Listing 9-29. Video drawn on the canvas using JavaScript
+			</p>
+			<video src="video.mp4" controls="controls">
+			  Video not supported
+			</video>
+			<canvas id="canvas">
+			  Canvas not supported
+			</canvas>
+			<script>
+			  var ctx = document.getElementById('canvas').getContext('2d');
+			  var video = document.getElementsByTagName('video')[0];
+			  video.onloadeddata = function(e) {
+			  ctx.canvas.width = video.videoWidth;
+			  ctx.canvas.height = video.videoHeight;
+			  ctx.drawImage(video, 0, 0);
+			  }
+			</script>
+		</section>		
+	</body>
+</html>

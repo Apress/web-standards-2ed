@@ -1,0 +1,22 @@
+body {
+	font-size: 1.6em;
+	font-family: "Georgia";
+}
+
+h1 {
+	font-size: 2em;
+}
+
+p:first-letter {
+	font-size: 1.8em;
+}
+
+#onleft {
+	float: left;
+	margin: 0px 20px 0px 0px;
+}
+
+#onright {
+	float: right;
+	margin: 30px;
+}

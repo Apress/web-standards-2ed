@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Inline JavaScript example</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			var http = false;
+
+			if (navigator.appName == "Microsoft Internet Explorer") {
+			  http = new ActiveXObject("Microsoft.XMLHTTP");
+			} else {
+			   http = new XMLHttpRequest();
+			}
+
+			function replace() {
+			  http.open("GET", "ajaxdemo.txt", true);
+			  http.onreadystatechange=function() {
+				if (http.readyState == 4) {
+				  document.getElementById('repdiv').innerHTML = http.responseText;
+				}
+			  }
+			  http.send(null);
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Inline JavaScript demo</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<p><a href="javascript:replace()">Click here to replace text</a></p>
+		<div id="repdiv">
+		  Original text in the markup
+		</div>
+	</body>
+</html>

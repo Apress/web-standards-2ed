@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chapter 5 main demo</title>
+		<meta charset="UTF-8" />
+		<link  rel="stylesheet" type="text/css" href="chapter5.css" />
+		<style type="text/css">
+		  #disclaimer {
+		  text-align: center;
+		  margin-top: 30px;
+		  margin-bottom: 60px;
+		} 
+		</style>	
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="main">
+				<h1>Chapter 5 main demo</h1>
+				<p class="abstract">
+					<a href="http://www.lesliesikos.com"><img src="logo.png" alt="logo" /></a> This is a demonstration file of Chapter 5.
+				</p>
+				<p class="caution">
+				Caution! Some rules override the styles declared earlier in the CSS file.
+				</p>
+				<p>
+				This is a demonstration of the CSS rules presented in Chapter 5 of the book <a href="http://www.masteringhtml5css3.com">Web standards</a>. Consequently, the CSS file is not optimized for a particular website.
+				</p>
+				<h2>Heading 2</h2>
+				<div class="tip">
+					<p>
+					Tip. Create separate CSS files with the rulesets of chapter5.css, and test them.
+					</p>
+				</div>
+				<p>
+				 Another paragraph.
+				</p>			
+				<h3 class="abstract">Abstract</h3>
+				<div id="articles">
+				Listing 5-11
+				</div>
+				<div id="relatedlinks">
+				<a href="http://www.lesliesikos.com">The Author</a> | <a href="http://www.apress.com">The Publisher</a> | <a href="http://www.apress.com/web-development/web-standards/9781484208847">The Book</a>
+				</div>
+				<div class="book">
+				Book1
+				</div>
+				<table>
+					<tr>
+						<td><a href="http://www.privatecloud.services">Private Cloud Services</a></td>	<!-- Listing 5-25. A hyperlink example for the child selector in Listing 5-24 -->
+						<td><p>One of the unique attractions of <a href="http://www.nairobicity.go.ke/">Nairobi, Kenya</a> is the Nairobi National Park.</p></td> <!-- Listing 5-28. An anchor example where Listing 5-27 is applied -->
+				</table>
+				<p>A paragraph - Listing 5-31. A paragraph that does not apply the rule shown in Listing 5-29</p>
+				<p>
+				<a href="http://www.domainregistrationwebhosting.com.au">Domain registration (Listing 5-26.The child selector example is not applied to anchors that are not children of a data cell)</a>
+				</p>
+				<div class="book">
+				Book2
+				</div>	
+				<h2>Heading</h2>
+				<div id="decor">
+				Decoration — padding demo
+				</div>
+				<p>A paragraph - Listing 5-30. An element that applies the green color from Listing 5-29</p>
+				<div id="warning">
+					<span class="caution">Caution! The collection of the rules in <code>chapter5.css</code> have a different effect than some of the same rules provided in separate files due to inheritance and declaration order.</span>
+				</div>				
+				<h1>Heading</h1>	<!-- Listing 5-32. Due to the missing level 2 heading preceding the paragraph, the style is not applied here either -->
+				<p>A paragraph</p>
+				<ul class="tick">
+					<li>A list item with a custom bullet</li>
+					<li>Another list item</li>
+					<li>List item #3</li>
+					<li>List item #4</li>
+					<li>List item #5</li>
+				</ul>
+				<div class="book">
+				Book3
+				</div>
+			</div>
+			<p id="disclaimer">
+			Disclaimer — the styles declared in the head apply to one element of a page within a site. Otherwise external CSS files are preferred.
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 localStorage example</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body onload="displayItems()">
+		<header>
+			<h1>Listing 6-</h1>
+		</header>
+		<section>
+			<p>
+			This is a sample code from chapter 6 of the book <a href="http://www.masteringhtml5css3.com">Web standards – Mastering HTML5, CSS3, and XML</a>.
+			</p>
+		</section>
+		<section>
+			<form name="lsform">
+				<fieldset title="WebStorage">
+					<legend>Local storage of name-value pairs</legend>
+					<p>
+						<label>Value:</label>
+						<input name="data">
+					</p>
+					<p>
+						<label>Name:</label>
+						<input name="name">
+					</p>
+					<p>
+						<input type="button" value="Set item" onclick="setTheItem()">
+					</p>
+					<table id="pairs"></table>
+					<p>
+						Enter name to remove item: <input name="remove"><input type="button" value="Remove item" onclick="removeTheItem()">
+						<input type="button" value="Clear items" onclick="clearItems()"> 
+					</p>
+					<p>
+						Enter name to retrieve value: <input name="retrieve">
+						<input type="button" value="Get value" onclick="getTheItem()">
+					</p>
+				   <script type="text/javascript">
+
+					 function setTheItem() {
+					   var name = document.forms.lsform.name.value;
+					   var data = document.forms.lsform.data.value;
+					   localStorage.setItem(name, data);
+					   displayItems();
+					 }
+
+					 function getTheItem() {
+					   var name = document.forms.lsform.retrieve.value;
+					   window.alert('The value associated with the name ' + name + ' is ' + localStorage.getItem(name));
+					   displayItems();
+					 }
+
+					 function removeTheItem() {
+					   var name = document.forms.lsform.remove.value;
+					   document.forms.lsform.data.value = localStorage.removeItem(name);
+					   displayItems();
+					 }
+
+					 function clearItems() {
+					   localStorage.clear();
+					   displayItems();
+					 }
+
+					 function displayItems() {
+					   var key = "";
+					   var pairs = "<tr><th>Name</th><th>Value</th></tr>\n";
+					   var i = 0;
+					   for (i = 0; i <= localStorage.length-1; i++) {
+						 key = localStorage.key(i);
+						 pairs += "<tr><td>" + key + "</td>\n<td>" + localStorage.getItem(key) + "</td></tr>\n";
+					   }
+					   if (pairs == "<tr><th>Name</th><th>Value</th></tr>\n") {
+						 pairs += "<tr><td><em>&lt;not set&gt;</em></td>\n<td><em>&lt;not set&gt;</em></td></tr>\n";
+					   }
+					   document.getElementById('pairs').innerHTML = pairs;
+					 }
+				   </script>
+				</fieldset>
+			</form>
+		</section>
+	</body>
+</html>
